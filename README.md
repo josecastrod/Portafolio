@@ -40,7 +40,7 @@ ___
 
 ### 1. Awwwards
 
-!(Captura de pantalla 2025-11-20 093550)
+![Image alt text](https://josefinacastro.cl/img/Captura%20de%20pantalla%202025-11-20%20093550.png)
 
 Qué es: Página de repoertorio de websites que han sido reconocidas.
 Fuente: <(https://www.awwwards.com/?utm_source=chatgpt.com)>
@@ -50,14 +50,11 @@ Aspectos positivos:
   - Sitio web intuitivo
 
 Aspectos negativos:
-  - Tamaño y aspecto de las tipografías muy denso
-  - Le falta dinamismo (en la forma en que se presentan los proyectos)
+  - Tipografía compite con el resto de la página
+  - Falta
 
----
-
-### 2. siteinspire
-
-!(Imagen de WhatsApp 2025-11-20 a las 10.31.36_06cfa919)
+### 2. siteinspir
+![Image alt text](https://josefinacastro.cl/img/Imagen%20de%20WhatsApp%202025-11-20%20a%20las%2010.31.36_06cfa919.jpg)
 
 Qué es: A showcase of the web’s finest design + talent
 Fuente: <https://www.siteinspire.com/about>
@@ -74,7 +71,7 @@ Aspectos negativos:
 
 ### 3. hellosuperheroes
 
-!(Captura de pantalla 2025-11-20 094827)
+![Image alt text](https://josefinacastro.cl/img/Captura%20de%20pantalla%202025-11-20%20094827.png)
 
 Qué es: Agencia de diseño
 Fuente: <https://hellosuperheroes.com/?ref=siteinspire>
@@ -85,12 +82,13 @@ Aspectos positivos:
 
 Aspectos negativos:
   - Sobresaturación
+  - colores de mucho contraste
 
 ---
 
 ### 4. Other – Free Portfolio Template 
 
-![Portafolio 1](Imagen de WhatsApp 2025-11-20 a las 10.29.43_db63832d)
+![Image alt text](https://josefinacastro.cl/img/Imagen%20de%20WhatsApp%202025-11-20%20a%20las%2010.29.43_db63832d.jpg)
 
 Qué es: Una plantilla minimalista para portafolios creativos desarrollada en **Framer**, que permite presentar proyectos en formato cuadrícula, lista o imagen completa.  
 Fuente: [https://other-template.framer.website/](https://other-template.framer.website/)
@@ -109,4 +107,5 @@ Aspectos negativos:
 ## Referentes - Moodboard
 
 El moodboard propone una estética minimalista y editorial, con énfasis en el contraste entre tonos neutros y acentos en colores más vibrantes. Busca generar movimiento a través de la construcción del esqueleto del layout: columnas que enmarcan, saltos de escala en titulares y cortes que marcan el paso entre secciones. 
-![Moodboard](1.png)
+
+![Image alt text](https://josefinacastro.cl/img/1.jpg)
