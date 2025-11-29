@@ -1,0 +1,803 @@
+:root {
+    /* Colores */
+    --bg-light: #f8f8f8;       /* Fondo principal muy claro */
+    --fg-dark: #333333;        /* Texto principal */
+    --fg-thin: #999999;        /* Texto secundario y líneas finas */
+    --accent-color: #7777DF;   /* Pink/Magenta de las flores */
+    --bg-white: #ffffff;       /* Blanco*/
+    
+    /* Tipografía */
+    --font-heading: 'Poppins', sans-serif; /* Usamos Poppins para headings */
+    --font-body: 'Inter', sans-serif;
+
+    /* Otros */
+    --border-thin: 1px solid rgba(0, 0, 0, 0.08); /* Líneas divisorias muy sutiles */
+    --spacing-unit: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--fg-dark);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Layout General y Contenedor Principal */
+/* ------------------------------------------------------------------ */
+
+.main-container {
+    max-width: min(1500px, 90vw);
+    margin: 0 auto;
+    padding: var(--spacing-unit) 0;
+}
+
+.page-section {
+    padding: 2rem 0; 
+}
+
+
+/* ------------------------------------------------------------------ */
+/* 10. EFECTO FOCO DE LUZ (MOUSE SPOTLIGHT) */
+/* ------------------------------------------------------------------ */
+
+#mouse-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Crucial: permite hacer clic en elementos debajo */
+    z-index: 10; /* Valor más bajo para que solo se superponga al contenido, no a la navegación fija */
+    
+    background-color: transparent; 
+    transition: background-image 0.1s linear; 
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. Header y Navegación (Fina y simple) */
+/* ------------------------------------------------------------------ */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    z-index: 500;
+    
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    
+    border-bottom: var(--border-thin);
+}
+
+.header-content {
+    padding: 0; 
+    display: flex;
+    justify-content: center; /* CENTRADO SIMPLE */
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem; /* ESPACIO REDUCIDO Y CENTRADO */
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: var(--fg-thin);
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-button.active {
+    color: var(--fg-dark);
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. Home Page (Layout de Portada Único) */
+/* ------------------------------------------------------------------ */
+
+.hero-section {
+    position: relative;
+    /* NUEVO: 10% (filtros) 45% (texto) 45% (imagen) */
+    grid-template-columns: 10% 45% 45%; 
+    min-height: 60vh;
+    overflow: hidden;
+    padding: 1rem 0;
+    border-top: var(--border-thin);
+    padding-top: 5rem; 
+}
+
+.hero-left-sidebar {
+    padding-top: 2rem; 
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.vertical-filter-button {
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--fg-thin);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    padding: 0.2rem 0;
+    transition: color 0.3s ease;
+}
+
+.vertical-filter-button:hover,
+.vertical-filter-button.active {
+    color: var(--fg-dark);
+    font-weight: 100;
+}
+
+.hero-center-content {
+    display: flex; /* CAMBIADO: A flex para mejor control */
+    flex-direction: column;
+    justify-content: flex-start; /* Alineado arriba */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+}
+
+.main-title-thin {
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 300; 
+    letter-spacing: 0.2em; 
+    line-height: 1.1;
+    margin: 0;
+    margin-top: 160px;
+}
+
+.personal-info {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--fg-dark);
+    margin-top: 0.2rem; 
+}
+
+.personal-info .role {
+    color: var(--fg-thin);
+    font-size: 0.9rem;
+}
+
+/* Estilo para el gran círculo curvo */
+.curved-links {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(40%, -55%);
+    width: 600px; 
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    pointer-events: none; 
+    border-color: var(--fg-thin);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.curved-links {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(40%, -55%);
+    width: 1000px; 
+    height: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    pointer-events: none; 
+    border-color: var(--fg-thin);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.curved-link-text {
+    position: absolute;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--fg-dark);
+    transform-origin: 0 0;
+}
+
+/* Posicionamiento manual de los textos curvos (ajustar si es necesario) */
+.curved-links .text-1 { top: 25%; right: 10%; }
+.curved-links .text-2 { top: 50%; right: 5%; }
+.curved-links .text-3 { top: 75%; right: 10%; }
+
+
+
+.hero-right-image {
+    position: left top;
+    min-height: 10vh;
+    background-image: url("./img/fondo 2.png"); /* Asegúrate de que esta ruta sea correcta */
+    background-position: right top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* 5. Secciones Secundarias (Proyectos / About) - Estilo Ligero */
+/* ------------------------------------------------------------------ */
+
+.projects-list-section {
+    padding-top: 0;
+    padding-bottom: 8rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* style.css, alrededor de la línea 160 */
+/* style.css, alrededor de la línea 160 */
+.projects-grid {
+    display: flex; 
+    /* CLAVE 1: Fuerza los elementos a permanecer en una sola línea */
+    flex-wrap: nowrap; 
+    /* CLAVE 2: Muestra la barra de scroll si el contenido se desborda */
+    overflow-x: auto; 
+    gap: 30px; 
+    margin-top: 2rem;
+    
+    /* Esta línea es crucial para el ancho fijo de las tarjetas */
+    min-width: 0; 
+
+    /* Estas líneas ocultan las barras de scroll predeterminadas */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.projects-grid::-webkit-scrollbar {
+    display: 20%;
+}
+
+/* style.css, alrededor de la línea 170 */
+.project-card {
+    /* *** MODIFICACIÓN CLAVE: Usar la propiedad flex estricta *** */
+    /* Sintaxis: flex-grow | flex-shrink | flex-basis */
+    /* 0: No crecer | 0: No encoger | 250px: Ancho base fijo */
+    flex: 0 0 250px; 
+    
+    /* El ancho está ahora definido por flex-basis (250px) */
+    /* Puedes eliminar o comentar min-width: 250px; y flex-shrink: 0; */
+    
+    background-color: var(--bg-light);
+    border: var(--border-thin); 
+    border-radius: 5px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* style.css, alrededor de la línea 184 */
+.project-thumb-wrapper {
+    /* Define el ancho al 100% de la tarjeta (ej. 250px) */
+    width: 250px;
+    
+    /* SOLUCIÓN CLAVE: Define una altura ESTRICTA basada en el ancho */
+    height: 250px; /* Si min-width de la tarjeta es 250px */
+    
+    /* Puedes mantener aspect-ratio o usar el height estricto. */
+    /* aspect-ratio: 1 / 1; */ 
+    overflow: hidden;
+    /* ... */
+}
+
+/* Imagen: Rellena el contenedor sin dejar espacios, cortando si es necesario */
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    /* PROPIEDAD CLAVE: cover asegura que la imagen llene el 100% del contenedor */
+    object-fit: cover; 
+    transition: transform 0.4s ease-out;
+}
+
+.project-card:hover .project-thumb {
+    transform: scale(1.05);
+}
+
+/* style.css, alrededor de la línea 205 */
+.project-info {
+    padding: 1.5rem;
+    width: 100%;
+    
+    /* MODIFICACIÓN CLAVE: Permite que esta sección se estire y rellene el espacio */
+    flex-grow: 1; 
+    
+    /* Opcional: Usar display flex en el info para empujar la descripción abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Opcional: si quieres el rol en el fondo */
+}
+
+.project-category {
+    font-size: 0.75rem;
+    color: var(--fg-thin);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--fg-dark);
+    transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT - Iluminar el título */
+.project-card:hover .project-title {
+    color: var(--accent-color); 
+}
+
+.project-card:hover {
+    /* Nueva Sombra Sutil: Define una sombra suave y difusa */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+    /* Transformación: Mueve la tarjeta ligeramente hacia arriba para el efecto 3D */
+    transform: translateY(-5px);
+}
+/* Tu efecto de zoom en la imagen (project-thumb) ya es bueno, lo dejamos */
+.project-card:hover .project-thumb {
+    transform: scale(1.05);
+}
+/* Tu efecto de color en el título al hacer hover (project-title) ya es bueno, lo dejamos */
+.project-card:hover .project-title {
+    color: var(--accent-color); 
+}
+
+/* style.css, alrededor de la línea 225 */
+.project-description {
+    font-size: 0.9rem;
+    color: var(--fg-thin);
+    /* MODIFICACIÓN CLAVE: Empuja este elemento hasta el fondo del contenedor flex */
+    margin-top: auto; 
+}
+
+
+/* ------------------------------------------------------------------ */
+/* 6. Footer */
+/* ------------------------------------------------------------------ */
+
+.main-footer {
+    background-color: var(--bg-light);
+    border-top: var(--border-thin);
+    padding: 2rem 0;
+}
+
+.copyright-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--fg-thin);
+}
+
+/* ------------------------------------------------------------------ */
+/* 7. Responsividad */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 992px) {
+    .hero-section {
+        grid-template-columns: 1fr; 
+        min-height: auto;
+        padding-top: 4rem;
+    }
+    
+    .hero-right-image {
+        display: none; 
+        min-height: 0;
+    }
+
+    .hero-left-sidebar {
+        padding-top: 2rem;
+        order: 2; 
+    }
+
+    .hero-center-content {
+        padding-top: 2rem;
+        order: 1;
+        text-align: center;
+    }
+
+    .main-title-thin {
+        font-size: 4rem;
+        letter-spacing: 0.1em;
+        margin-top: 20px;
+    }
+
+    .personal-info {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .curved-links {
+        display: none; 
+    }
+    
+    .filter-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        border-top: var(--border-thin);
+        padding-top: 20px;
+    }
+
+    .vertical-filter-button {
+        text-align: center;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* 8. SECCIÓN: SOBRE MÍ (Home) */
+/* ------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------ */
+/* 8. SECCIÓN: SOBRE MÍ (Home) - Diseño CV Claro */
+/* ------------------------------------------------------------------ */
+
+.home-about-section {
+    font-family: var(--font-heading); /* Corregido */
+    font-weight: 300; 
+    font-size: 2rem; 
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    /* CORREGIDO: Eliminamos el padding-left de 50rem que rompía el layout */
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    border-top: var(--border-thin);
+    background-color: var(--bg-light); 
+    color: var(--fg-dark);
+}
+
+/* ESTILOS PARA SUBTÍTULOS (Experiencia/Estudios) */
+.cv-subtitle {
+    font-family: var(--font-heading); /* Corregido */
+    font-size: 1.8rem; 
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--fg-dark);
+}
+
+/* Título <h2> general (Diseño con Propósito) */
+.home-about-text h2 {
+    font-family: var(--font-heading); /* Corregido */
+    font-weight: 300; 
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    color: var(--fg-dark);
+}
+
+/* style.css, alrededor de la línea 470 */
+.home-about-text p {
+    /* CLAVE: Reducido de 1rem (16px) a 0.9rem (14.4px) o menos */
+    font-size: 1rem; 
+    line-height: 2;
+    color: var(--fg-thin); /* Usamos gris delgado para ser más sutil */
+    margin-bottom: 1rem; 
+    font-weight: 300;
+    max-width: none;
+}
+
+/* style.css, alrededor de la línea 420 */
+.home-about-container {
+    display: grid;
+    /* 2 columnas: 40% (Izquierda) y 60% (Derecha) */
+    grid-template-columns: 40% 60%;
+    /* 2 filas con altura automática */
+    grid-template-rows: auto auto; 
+    gap: 3rem; /* Espacio entre filas y columnas */
+    
+    align-items: start; 
+}
+
+
+
+/* ÁREA 1: IMAGEN (Fila 1, Columna 1) */
+.home-about-image-wrapper {
+    /* Ocupa Fila 1, Columna 1 (La esquina superior izquierda) */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; 
+    
+    width: 100%; 
+    height: 450px; 
+    /* ... el resto de estilos de la foto ... */
+}
+
+/* COLUMNA 2: TEXTO DE BIO PRINCIPAL (Derecha) */
+.home-about-text {
+    width: calc(60% - 3rem); /* 60% menos el gap (3rem) */
+    flex-shrink: 0; 
+    order: 2; /* Se queda a la derecha, al lado de la foto */
+    /* ... */
+}
+
+/* Para hacerlo más fino: */
+.cv-main-title {
+    font-family: var(--font-heading); 
+    font-weight: 300; /* CLAVE: Usa 300 (fino) o 500 (medio) */
+    font-size: 1rem; 
+    /* ... */
+}
+
+.home-about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); 
+    transition: filter 0.6s ease;
+}
+/* CLAVE 2: Elimina el filtro cuando el mouse está encima del contenedor */
+.home-about-image-wrapper:hover img {
+    filter: grayscale(0%); 
+}
+
+
+/* ESTILO DE TÍTULO PRINCIPAL (CV) */
+.home-about-text .cv-main-title {
+    /* CORREGIDO: Sintaxis de font-family */
+    font-family: var(--font-heading); 
+    font-weight: 700; 
+    font-size: 2.5rem; 
+    margin-bottom: 2rem;
+    color: var(--fg-dark);
+}
+
+/* ÁREA 2: ESTUDIOS/SOFTWARE (Fila 2, Columna 1) */
+/* Usaremos la clase cv-full-width-details para Estudios/Software */
+.cv-full-width-details {
+    /* CLAVE: Ocupa Fila 2, Columna 1 (Justo debajo de la imagen) */
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3; 
+    
+    width: 100%; /* Ocupa el 100% de su celda (40% del ancho total) */
+    
+    /* Añadir separación visual si es necesario */
+    padding-top: 1.5rem; 
+    border-top: var(--border-thin);
+}
+
+
+/* ÁREA 3: BIO Y EXPERIENCIA (Fila 1 y 2, Columna 2) */
+.home-about-text {
+    /* CLAVE: Ocupa la columna 2, y se extiende por las filas 1 y 2 */
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; /* Se extiende verticalmente para cubrir el espacio */
+    
+    width: 100%; /* Ocupa el 100% de su celda (60% del ancho total) */
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Y aseguramos que la línea superior del CV no sea doble */
+.cv-details-section {
+    margin-top: 0; /* Eliminamos el margen superior si el párrafo ya tiene margen inferior */
+    padding-top: 1.5rem;
+    border-top: none; /* Quitamos esta línea, ya la tiene el párrafo de arriba */
+}
+
+//* style.css, alrededor de la línea 505 */
+
+/* ESTILOS PARA CADA ITEM (Experiencia/Estudios) */
+.cv-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    /* CAMBIO CLAVE: Usar 'solid' en lugar de 'dashed' para la línea continua */
+    border-bottom: 1px solid var(--fg-thin); 
+    line-height: 1.4;
+}
+.cv-item:last-of-type {
+    border-bottom: none; /* Esto evita la línea después del último ítem */
+}
+
+/* NUEVA FILA: PÁRRAFO DEBAJO DE LA FOTO */
+.cv-paragraph-below {
+    /* Ocupa todo el ancho (100%) para pasar a la línea de abajo */
+    width: 100%; 
+    order: 3; /* Va debajo de la foto y el texto principal */
+    
+    /* Estilos de párrafo */
+    font-size: 4rem;
+    line-height: 1.8;
+    color: var(--fg-dark); 
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: var(--border-thin);
+}
+
+/* SECCIÓN CV DE DETALLES */
+.cv-details-section {
+    width: 100%; /* Ocupa todo el ancho debajo del párrafo */
+    order: 4;
+    /* ... (resto de estilos de cv-details-section) ... */
+}
+
+/* Detalles principales de la experiencia/estudios */
+.cv-detail {
+    /* AJUSTE: Reducir a 0.85rem (más pequeño y sutil) */
+    font-size: 1rem; 
+    font-weight: 200;
+    color: var(--fg-dark);
+    width: 75%;
+    text-align: left;
+}
+
+/* ESTILOS PARA SUBTÍTULOS (Experiencia/Estudios) */
+.cv-subtitle {
+    font-family: var(--font-heading); /* Corregido */
+    font-size: 1.8rem; 
+    font-weight: 100;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--fg-dark);
+}
+
+* Fechas */
+.cv-date {
+    /* AJUSTE: Reducir a 0.85rem */
+    font-size: 0.5rem; 
+    font-weight: 500;
+    color: var(--fg-dark);
+    flex-shrink: 0; 
+    width: 10%;
+}
+
+/* Texto en cursiva (si ya estaba en 0.85rem, no necesita cambio) */
+.cv-italic {
+    font-style: italic;
+    font-size: 1rem; 
+    font-weight: 300;
+    color: var(--fg-thin);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* REGLAS PARA ANIMACIÓN AL HACER SCROLL (SCROLL-REVEAL) */
+/* ------------------------------------------------------------------ */
+
+/* 1. Estado Inicial (Oculto y desplazado hacia abajo) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px); 
+    /* Duración de transición ajustada a 1.2s para que sea visible pero rápido */
+    transition: opacity 2s cubic-bezier(0.2, 0.5, 0.1, 1), 
+                transform 4s cubic-bezier(0.2, 0.5, 0.1, 1);
+}
+
+/* 2. Estado Final (Visible y en posición) */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* SECCIÓN CONTACTO (Como un bloque de scroll en HOME) */
+/* ------------------------------------------------------------------ */
+.contact-section {
+    padding: 8rem 0;
+    border-top: var(--border-thin);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 3rem;
+    color: var(--fg-dark);
+}
+
+.contact-info-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
+    gap: 3rem;
+    padding-top: 3rem;
+    border-top: var(--border-thin);
+}
+
+.contact-cta-message {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--fg-thin);
+    line-height: 1.8;
+}
+
+.contact-links {
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--fg-dark);
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+.contact-link .link-label {
+    font-weight: 500;
+    color: var(--fg-thin);
+    margin-right: 0.5rem;
+}
+
+/* Responsive para la sección de contacto */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 5rem 0;
+    }
+    .contact-title {
+        font-size: 2.5rem;
+    }
+    .contact-info-grid {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .contact-cta-message {
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
