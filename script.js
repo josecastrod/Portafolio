@@ -418,6 +418,8 @@ function setupProjectHoverPreview(container) {
 }
 
 
+// script.js - Sustitución de la función renderSingleProjectPage
+
 /**
  * Renders the dedicated page for a single project (Case Study).
  * @param {number} projectId El ID del proyecto a mostrar.
@@ -449,15 +451,17 @@ function renderSingleProjectPage(projectId) {
     singlePageDiv.className = 'page-section single-project-page';
     singlePageDiv.style.paddingTop = '8rem';
 
-    // Renderizado dinámico de la galería del proyecto
+    // CLAVE: Generación de la tira de carrusel básica
     const galleryHtml = projectData.galeria ? projectData.galeria.map(imgUrl => `
-        <img 
-            src="${imgUrl}" 
-            alt="Detalle de ${projectData.nombre}" 
-            style="width: 100%; display: block; border-radius: 8px; max-height: 400px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);"
-            onerror="this.onerror=null; this.src='https://placehold.co/800x400?text=IMAGEN+DE+GALERÍA';"
-        />
-    `).join('') : '<p style="color: var(--fg-thin);">No hay imágenes de galería disponibles para este proyecto.</p>';
+        <div class="gallery-item-wrapper">
+            <img 
+                src="${imgUrl}" 
+                alt="Detalle de ${projectData.nombre}" 
+                class="gallery-image"
+                onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=IMAGEN+GALERIA';"
+            />
+        </div>
+    `).join('') : '<p style="color: var(--fg-thin);">No hay imágenes de galería disponibles.</p>';
 
 
     singlePageDiv.innerHTML = `
@@ -483,9 +487,11 @@ function renderSingleProjectPage(projectId) {
                     </div>
                 </div>
                 
-                <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 2rem;">
-                    <h3 class="cv-subtitle" style="font-size: 1.5rem; color: var(--fg-dark);">Galería de Proceso</h3>
-                    ${galleryHtml}
+                <div style="margin-top: 2rem;">
+                    <h3 class="cv-subtitle" style="font-size: 1.5rem; color: var(--fg-dark); margin-bottom: 1rem;">Galería de Proceso</h3>
+                    <div class="gallery-strip">
+                        ${galleryHtml}
+                    </div>
                 </div>
                 
                 <button id="back-to-home-button" class="action-button" style="display: inline-block; margin-top: 4rem;">&larr; Volver al Inicio</button>
@@ -494,9 +500,8 @@ function renderSingleProjectPage(projectId) {
     `;
 
     mainContent.appendChild(singlePageDiv);
-    currentPage = 'single-project'; // Estado especial para la página única
+    currentPage = 'single-project'; 
     
-    // Asignamos el listener justo después de que el elemento ha sido insertado
     const backButton = document.getElementById('back-to-home-button');
     if (backButton) {
         backButton.addEventListener('click', () => {
@@ -508,6 +513,8 @@ function renderSingleProjectPage(projectId) {
     updateNavButtons();
 }
 
+
+// script.js - Sustitución de la función renderProjectGrid
 
 /**
  * Renders the project grid section (Galeria de Imagen Dominante).
@@ -522,7 +529,7 @@ function renderProjectGrid(projects) {
                 <article 
                     class="project-card" 
                     data-project-id="${p.id}" 
-                    data-preview-img="${p.thumb || 'https://placehold.co/400x300/DCDCDC/333333?text=IMAGEN+FALTANTE'}"
+                    data-preview-img="${p.thumb || 'img/placeholder_mod.jpg'}"
                 >
                     
                     <div class="project-thumb-wrapper">
@@ -786,4 +793,5 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
