@@ -261,7 +261,7 @@ function renderHomeAboutSection() {
         <div class="home-about-container main-container">
             
             <div class="home-about-image-wrapper">
-                <img src="img/fotito.webp" alt="Retrato Maria Josefina">
+                <img src="img/fotito.webp" alt="Retrato María Josefina">
             </div>
             
             <div class="cv-full-width-details">
@@ -321,7 +321,7 @@ function renderHomeContactSection() {
 
     section.innerHTML = `
         <div class="main-container contact-container">
-            <h2 class="contact-title">Hablemos :)</h2>
+            <h3 class="contact-title">Hablemos :)</h3>
             <div class="contact-info-grid">
                 <p class="contact-cta-message">
                     Si quieres hablar o saber más, contáctame.
@@ -786,3 +786,4 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
