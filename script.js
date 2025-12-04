@@ -261,7 +261,7 @@ function renderHomeAboutSection() {
         <div class="home-about-container main-container">
             
             <div class="home-about-image-wrapper">
-                <img src="img/Proyecto nuevo (8).webp" alt="Retrato Maria Josefina">
+                <img src="img/fotito.webp" alt="Retrato Maria Josefina">
             </div>
             
             <div class="cv-full-width-details">
@@ -784,4 +784,5 @@ window.onload = () => {
     
     // Restaurar el scroll del cuerpo
     document.body.style.overflowY = 'auto';
+
 };
