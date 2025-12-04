@@ -2,7 +2,7 @@
     /* Colores */
     --bg-light: #f8f8f8;       /* Fondo principal muy claro */
     --fg-dark: #333333;        /* Texto principal */
-    --fg-thin: #999999;        /* Texto secundario y líneas finas */
+    --fg-thin:#666666;        /* Texto secundario y líneas finas */
     --accent-color: #822049;   /* Vino*/
     --bg-white: #ffffff;       /* Blanco*/
     
@@ -527,17 +527,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* style.css - Fragmento home-about-text p (Alrededor de la línea 700) */
 .home-about-text p {
     font-size: 1rem; 
     line-height: 2;
-    color: var(--fg-thin); 
+    color: var(--fg-dark); /* CAMBIO: Usamos fg-dark (#333333) en lugar de fg-thin */
     margin-bottom: 1rem; 
     font-weight: 300;
     max-width: none;
-}
-
-.cv-details-section {
-    padding-top: 1.5rem;
 }
 
 .cv-item {
@@ -821,4 +818,5 @@ body {
         opacity: 4;
         transform: scale(0.4); /* Termina en el tamaño normal (efecto de zoom in) */
     }
+
 }
