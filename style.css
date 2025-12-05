@@ -462,7 +462,7 @@ body {
     /* 2 columnas: 40% (Imagen/Estudios) / 60% (Bio/Experiencia) */
     grid-template-columns: 40% 60%;
     grid-template-rows: auto auto; 
-    gap: 3rem; 
+    gap: 6rem; 
     align-items: start; 
 }
 
@@ -471,7 +471,7 @@ body {
     grid-column: 1 / 2; 
     grid-row: 1 / 2; 
     width: 100%; 
-    height: 350px; 
+    height: 400px; 
 }
 
 /* ÁREA 2: ESTUDIOS (Columna 1, Fila 2) */
@@ -512,18 +512,18 @@ body {
 
 .home-about-text .cv-main-title {
     font-family: var(--font-heading); 
-    font-weight: 700; 
-    font-size: 2.5rem; 
+    font-weight: 200; 
+    font-size: 2rem; 
     margin-bottom: 2rem;
     color: var(--fg-dark);
 }
 
 .cv-subtitle {
     font-family: var(--font-heading); 
-    font-size: 1.8rem; 
-    font-weight: 100;
+    font-size: 1.5rem; 
+    font-weight: 400;
     margin-top: 1rem;
-    color: var(--accent-color); /* Color de acento */
+    color: var(--fg-dark); 
     margin-bottom: 0.5rem;
 }
 
@@ -567,7 +567,7 @@ body {
 .cv-italic {
     font-style: italic;
     font-size: 1rem; 
-    font-weight: 300;
+    font-weight: 100;
     color: var(--fg-thin);
 }
 
@@ -860,3 +860,4 @@ body {
 .gallery-image:hover {
     transform: scale(1.03);
 }
+
