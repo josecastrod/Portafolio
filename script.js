@@ -45,11 +45,11 @@ const trabajos = [
         areas: ["Producto"],
         rol: "Diseño de producto, propuesta para Atakama Outdoor SPA de diseño nueva linea de pantuflas",
         thumb: "img/Proyectos destacados 3.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
-        detalle_thumb: "file:///C:/Users/josef/OneDrive%20-%20Universidad%20Cat%C3%B3lica%20de%20Chile/Documentos/Seminario%20de%20t%C3%ADtulo/web/trabajo%20final/img/panfufla.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        detalle_thumb: "img/panfufla.web, // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
-             "file:///C:/Users/josef/OneDrive%20-%20Universidad%20Cat%C3%B3lica%20de%20Chile/Documentos/Seminario%20de%20t%C3%ADtulo/web/trabajo%20final/img/panfufla.webp",
-            "img/mido.webp",
-            "img/Manual_Oficial16.jpg"
+             "img/panfufla.webp",
+            "img/mido.webpm",
+            "img/Manual_Oficial16.jpgm"
         ] // Puedes dejarlo vacío si no hay más imágenes
     },
     {
@@ -81,7 +81,7 @@ const trabajos = [
         areas: ["Industrial", "Gráfico"],
         rol: "Diseño de espacios",
         thumb: "img/Proyectos destacados-07.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
-        detalle_thumb: "img/intervencion_small_detail.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        detalle_thumb: "img/render 2.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
             "img/render 12.png",
             "img/render 2.jpg",
@@ -101,7 +101,7 @@ const trabajos = [
              "img/misma vista silla.jpg",
             "img/vestido.jpg",
             "img/render 10.jpg",
-            "img/render 15.png"
+            "img/Captura de pantalla 2024-04-24 220705.png"
         ]
     },
     
@@ -814,6 +814,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
