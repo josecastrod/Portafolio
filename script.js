@@ -56,7 +56,7 @@ const trabajos = [
         id: 4,
         nombre: "Tesoros Naturales de Chile",
         areas: ["Producto"],
-        rol: "Diseño de producto, botella tipo bitácora",
+        rol: "Diseño de producto, botella tipo bitácora de los tesoros de nuestro País",
         thumb: "img/Proyectos destacados.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/botella.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
@@ -70,7 +70,7 @@ const trabajos = [
         id: 5,
         nombre: "Diseño para la Inclusividad Universal",
         areas: ["Industrial - Espacios"],
-        rol: "Diseño de producto, petaca, Hecha en práctica de Atakama Outdoor SPA",
+        rol: "Diseño de espacio para YUNUS, Municipalidad de Peñalolen",
         thumb: "img/Proyectos destacados-05.png",// <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/petaca.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: []
@@ -79,7 +79,7 @@ const trabajos = [
         id: 6,
         nombre: "Unidad de Urgencias UC",
         areas: ["Industrial", "Gráfico"],
-        rol: "Diseño de espacios",
+        rol: "Diseño de espacios para habilitar estacios para personal médico de Urgencia pediátrica",
         thumb: "img/Proyectos destacados-07.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/render 2.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
@@ -94,7 +94,7 @@ const trabajos = [
         id: 7,
         nombre: "Modelado 3D",
         areas: ["Industrial", "Gráfico"],
-        rol: "Diseño integral",
+        rol: "Diseño Industrial",
         thumb: "img/Proyectos destacados-08.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/intervencion_small_detail.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
@@ -814,6 +814,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
