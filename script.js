@@ -19,9 +19,10 @@ const trabajos = [
         detalle_thumb: "img/img7.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         descripcion_larga: "Este proyecto se centró en la exploración de nuevas materialidades textiles y en la dirección de arte para la campaña fotográfica, buscando un estilo orgánico y natural.",
         galeria: [
-            "img/intervencion_detail_1.jpg", // <--- RUTA DE EJEMPLO 1
-            "img/intervencion_detail_2.jpg", // <--- RUTA DE EJEMPLO 2
-            "img/intervencion_diagrama.png"
+            "img/estampado.webp", // <--- RUTA DE EJEMPLO 1
+            "img/Proyecto nuevo (10).webp", // <--- RUTA DE EJEMPLO 2
+            "img/Proyecto nuevo (11).webp",
+             "iimg/img7.jpg"
         ]
     },
     {
@@ -33,8 +34,9 @@ const trabajos = [
         detalle_thumb: "img/mido.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         descripcion_larga: "MIDO es una aplicación de domótica donde desarrollé la identidad de marca completa, desde el logo hasta el diseño de la interfaz de usuario, priorizando la simplicidad y la experiencia del usuario.",
         galeria: [
-            "img/mido_app_screenshot.jpg",
-            "img/mido_wireframe.png"
+            "img/Manual Oficial 1.jpg",
+            "img/mido.webp",
+            "img/Manual_Oficial16.jpg"
         ]
     },
     {
@@ -44,7 +46,11 @@ const trabajos = [
         rol: "Diseño de producto, propuesta para Atakama Outdoor SPA de diseño nueva linea de pantuflas",
         thumb: "img/Proyectos destacados 3.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "file:///C:/Users/josef/OneDrive%20-%20Universidad%20Cat%C3%B3lica%20de%20Chile/Documentos/Seminario%20de%20t%C3%ADtulo/web/trabajo%20final/img/panfufla.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        galeria: [] // Puedes dejarlo vacío si no hay más imágenes
+        galeria: [
+             "file:///C:/Users/josef/OneDrive%20-%20Universidad%20Cat%C3%B3lica%20de%20Chile/Documentos/Seminario%20de%20t%C3%ADtulo/web/trabajo%20final/img/panfufla.webp",
+            "img/mido.webp",
+            "img/Manual_Oficial16.jpg"
+        ] // Puedes dejarlo vacío si no hay más imágenes
     },
     {
         id: 4,
@@ -53,7 +59,12 @@ const trabajos = [
         rol: "Diseño de producto, botella tipo bitácora",
         thumb: "img/Proyectos destacados.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/botella.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        galeria: []
+        galeria: [
+             "img/DSC8921.webp",
+            "img/botella.webp",
+            "img/DSC8915.webp",
+             "img/TesorosNaturalesdeChile3.webp"
+        ]
     },
     {
         id: 5,
@@ -71,7 +82,12 @@ const trabajos = [
         rol: "Diseño de espacios",
         thumb: "img/Proyectos destacados-07.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/intervencion_small_detail.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        galeria: []
+        galeria: [
+            "img/render 12.png",
+            "img/render 2.jpg",
+            "img/render 10.jpg",
+            "img/render 15.png"
+        ]
     },
     
     {
@@ -81,7 +97,12 @@ const trabajos = [
         rol: "Diseño integral",
         thumb: "img/Proyectos destacados-08.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/intervencion_small_detail.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        galeria: []
+        galeria: [
+             "img/misma vista silla.jpg",
+            "img/vestido.jpg",
+            "img/render 10.jpg",
+            "img/render 15.png"
+        ]
     },
     
 ];
@@ -793,5 +814,6 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
