@@ -38,7 +38,7 @@ const trabajos = [
         galeria: [
             "img/Manual Oficial 1.jpg",
             "img/mido.webp",
-            "img/Manual_Oficial16.jpg"
+            "img/Manual_Oficial16.jpg",
             "img/mido 4.png"
         ]
     },
@@ -83,7 +83,7 @@ const trabajos = [
         solucion_corta: "Implementación de una técnica de sublimación orgánica en algodón reciclado para reducir la huella hídrica.", // <-- ¡AÑADIR ESTO!
         descripcion_larga: "Este proyecto se centró en la exploración de nuevas materialidades textiles y en la dirección de arte para la campaña fotográfica, buscando un estilo orgánico y natural.",
         galeria: [
-            "img/yunus.png"
+            "img/yunus.png",
             "img/yunus 2.png"
         ]
     },
@@ -830,6 +830,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
