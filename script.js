@@ -17,6 +17,7 @@ const trabajos = [
         rol: "Diseño textil + dirección de arte + producción fotográfica",
         thumb: "img/Proyectos destacados-01.png",// <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/img7.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        solucion_corta: "Implementación de técnica de aplicaciones y estampado en tela.", // <-- ¡AÑADIR ESTO!
         descripcion_larga: "Este proyecto se centró en la exploración de nuevas materialidades textiles y en la dirección de arte para la campaña fotográfica, buscando un estilo orgánico y natural.",
         galeria: [
             "img/estampado.webp", // <--- RUTA DE EJEMPLO 1
@@ -32,24 +33,28 @@ const trabajos = [
         rol: "Identidad de marca y diseño de APP",
         thumb: "img/Proyectos destacados 4.png",// <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/mido.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        descripcion_larga: "MIDO es una aplicación de domótica donde desarrollé la identidad de marca completa, desde el logo hasta el diseño de la interfaz de usuario, priorizando la simplicidad y la experiencia del usuario.",
+        solucion_corta: "En MIDO se desarrolló la identidad de marca completa, desde el logo hasta el diseño de la interfaz de usuario, priorizando la simplicidad y la experiencia del usuario.", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "MIDO busca transformar la forma en que las personas interactúan con sus hogares. El  propósito es acercar la domótica a la vida diaria y convertirla en una experiencia inmersiva, donde la eficiencia, seguridad, confianza y conectividad permitan estar conectado con lo que más quieres desde cualquier lugar y sin preocupaciones. ",
         galeria: [
             "img/Manual Oficial 1.jpg",
             "img/mido.webp",
             "img/Manual_Oficial16.jpg"
+            "img/mido 4.png"
         ]
     },
     {
         id: 3,
         nombre: "Hábitat - Un mundo",
         areas: ["Producto"],
-        rol: "Diseño de producto, propuesta para Atakama Outdoor SPA de diseño nueva linea de pantuflas",
+        rol: "Diseño de producto, propuesta para Atakama Outdoor SPA.",
         thumb: "img/Proyectos destacados 3.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/panfufla.web", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        solucion_corta: "Propuesta nueva línea de pantuflas para Atakama Outdoor.", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "Queremos invitar a las personas a valorar y proteger lo que nos rodea, haciendo entender que cada ecosistema mantiene distintas vidas en algún rincón de nuestro país.",
         galeria: [
-             "img/panfufla.webp",
-            "img/mido.webpm",
-            "img/Manual_ficial16.jpg"
+             "img/pantufla bosque.png",
+            "img/pantufla cordillera.png",
+            "img/pantufla mar.png"
         ] // Puedes dejarlo vacío si no hay más imágenes
     },
     {
@@ -57,8 +62,10 @@ const trabajos = [
         nombre: "Tesoros Naturales de Chile",
         areas: ["Producto"],
         rol: "Diseño de producto, botella tipo bitácora de los tesoros de nuestro País",
-        thumb: "img/Proyectos destacados.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
+        thumb: "img/ataka.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/botella.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        solucion_corta: "Implementación de una técnica de sublimación orgánica en algodón reciclado para reducir la huella hídrica.", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "Este proyecto se centró en la exploración de nuevas materialidades textiles y en la dirección de arte para la campaña fotográfica, buscando un estilo orgánico y natural.",
         galeria: [
              "img/DSC8921.webp",
             "img/botella.webp",
@@ -73,7 +80,12 @@ const trabajos = [
         rol: "Diseño de espacio para YUNUS, Municipalidad de Peñalolen",
         thumb: "img/Proyectos destacados-05.png",// <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/petaca.webp", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
-        galeria: []
+        solucion_corta: "Implementación de una técnica de sublimación orgánica en algodón reciclado para reducir la huella hídrica.", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "Este proyecto se centró en la exploración de nuevas materialidades textiles y en la dirección de arte para la campaña fotográfica, buscando un estilo orgánico y natural.",
+        galeria: [
+            "img/yunus.png"
+            "img/yunus 2.png"
+        ]
     },
     {
         id: 6,
@@ -82,6 +94,8 @@ const trabajos = [
         rol: "Diseño de espacios para habilitar estacios para personal médico de Urgencia pediátrica",
         thumb: "img/Proyectos destacados-07.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/render 2.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        solucion_corta: "En la unidad de Urgencia Pediátrica del Centro UC Christus Marcoleta se plantea la creación de un espacio destinado al personal médico, a partir de la necesidad de contar con áreas de descanso dentro del mismo sector. Esta propuesta busca ofrecer un entorno adecuado para el bienestar del equipo de salud, proporcionando un lugar cómodo y accesible que contribuya a mejorar su desempeño y, en consecuencia, la calidad de la atención entregada a los pacientes. ", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "Proyecto de diseño para la innovación. Habilitación de espacio para personal médico de urgencia pediátrica",
         galeria: [
             "img/render 12.png",
             "img/render 2.jpg",
@@ -97,6 +111,8 @@ const trabajos = [
         rol: "Diseño Industrial",
         thumb: "img/Proyectos destacados-08.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
         detalle_thumb: "img/intervencion_small_detail.jpg", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        solucion_corta: "Módulo de atención para personas con discapacidad cognitiva, enfocado en TEA. Busca reducir el ruido ambiental en más de un 50%.", // <-- ¡AÑADIR ESTO!
+        descripcion_larga: "Proyecto en colaboración con YUNUS, fundación de la comuna de peñalolén que busca la integración de personas en el ámbito laboral.",
         galeria: [
              "img/misma vista silla.jpg",
             "img/vestido.jpg",
@@ -504,7 +520,7 @@ function renderSingleProjectPage(projectId) {
                     </div>
                     <div>
                         <h3 class="cv-subtitle" style="font-size: 1.5rem; color: var(--fg-dark);">Solución</h3>
-                        <p>Explicación de la solución y tu enfoque. Fuimos pioneros en el uso de la materialidad X y logramos reducir los costos de producción en un 15% mediante el proceso Y.</p>
+                        <p>${projectData.solucion_corta || 'Aún no se ha añadido una solución detallada para este proyecto.'}</p>
                     </div>
                 </div>
                 
@@ -814,6 +830,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
