@@ -23,7 +23,7 @@ const trabajos = [
             "img/estampado.webp", // <--- RUTA DE EJEMPLO 1
             "img/Proyecto nuevo (10).webp", // <--- RUTA DE EJEMPLO 2
             "img/Proyecto nuevo (11).webp",
-             "iimg/img7.jpg"
+             "img/img7.jpg"
         ]
     },
     {
@@ -830,6 +830,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
