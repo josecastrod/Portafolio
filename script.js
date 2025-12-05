@@ -504,7 +504,7 @@ function renderSingleProjectPage(projectId) {
                     </div>
                     <div>
                         <h3 class="cv-subtitle" style="font-size: 1.5rem; color: var(--fg-dark);">Solución</h3>
-                        <p>Explicación de la solución y tu enfoque. Fuimos pioneros en el uso de la materialidad X y logramos reducir los costos de producción en un 15% mediante el proceso Y.</p>
+                        <p>Explicación de la solución y tu enfoque. Se buscaron soluciones para cada problemática.</p>
                     </div>
                 </div>
                 
@@ -814,6 +814,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
