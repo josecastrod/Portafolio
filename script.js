@@ -45,11 +45,11 @@ const trabajos = [
         areas: ["Producto"],
         rol: "Diseño de producto, propuesta para Atakama Outdoor SPA de diseño nueva linea de pantuflas",
         thumb: "img/Proyectos destacados 3.png", // <--- IMAGEN PRINCIPAL (TIRA ANCHA)
-        detalle_thumb: "img/panfufla.web, // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
+        detalle_thumb: "img/panfufla.web", // <--- ¡NUEVA IMAGEN PARA EL DESPLIEGUE!
         galeria: [
              "img/panfufla.webp",
             "img/mido.webpm",
-            "img/Manual_Oficial16.jpgm"
+            "img/Manual_ficial16.jpg"
         ] // Puedes dejarlo vacío si no hay más imágenes
     },
     {
@@ -814,6 +814,7 @@ window.onload = () => {
     document.body.style.overflowY = 'auto';
 
 };
+
 
 
 
