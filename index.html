@@ -3,49 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - María Josefina Castro Dintrans</title>
+    <title>Josefina Castro — Portafolio</title>
+    <meta name="description" content="Portafolio de María Josefina Castro Dintrans, diseñadora integral UC. Diseño de producto, investigación de materiales, UI/UX y experiencias.">
+    <meta property="og:title" content="Josefina Castro — Portafolio">
+    <meta property="og:description" content="Diseño integral: producto, materiales, interfaces y experiencias.">
+    <meta property="og:image" content="img/web/muma-ecosistema.webp">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="img/web/pollito.webp">
+
+    <!-- Marca que JS está activo: si JS falla, todo se ve igual (sin animaciones) -->
+    <script>document.documentElement.classList.add('js');</script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Gloria+Hallelujah&family=Inter+Tight:wght@400;500;600&family=Cutive+Mono&family=Space+Mono:wght@400;700&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="app-container">
-        <header class="main-header">
-            <div class="header-content main-container">
-                <nav class="main-nav">
-                    <button id="nav-home" class="nav-button active">HOME</button>
-                    <button id="nav-about" class="nav-button">ABOUT</button> 
-                    <button id="nav-projects" class="nav-button">PROJECTS</button> 
-                    <button id="nav-contact" class="nav-button">CONTACT</button>
-                </nav>
 
-                
-            </div>
-        </header>
+    <a class="skip-link" href="#projects-section">Saltar al contenido</a>
 
-        <main id="main-content">
-            <div id="page-home" class="page-section"></div>
-            <div id="page-projects" class="page-section hidden"></div> 
-            <div id="page-about" class="page-section hidden"></div>
-        </main>
-
-        <footer class="main-footer">
-            <div class="copyright-text main-container">
-                <p>&copy; 2025 Maria Josefina Castro Dintrans. Diseñadora Integral.</p>
-            </div>
-        </footer>
+    <!-- CURSOR PERSONALIZADO (solo escritorio) -->
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"><span class="cursor-label"></span></div>
     </div>
 
-    <div id="mouse-spotlight"></div> 
-    
-    <div id="project-preview-cursor" class="hidden">
-        <img id="project-preview-image" src="" alt="Project Preview" />
+    <!-- NAVEGACIÓN (se esconde al bajar y aparece al subir) -->
+    <header class="site-nav" id="site-nav">
+        <a href="#cover-page" class="nav-brand">Josefina Castro<sup>®</sup></a>
+        <nav class="nav-links" aria-label="Secciones">
+            <a href="#projects-section" class="nav-link">Work</a>
+            <a href="#about-section" class="nav-link">About</a>
+        </nav>
+        <a href="#contact-section" class="nav-cta" data-magnetic="0.25">Contacto</a>
+    </header>
+
+    <!-- PORTADA: "PORTAFOLIO" escrito a mano con el pollito -->
+    <section id="cover-page" class="hero-classic">
+        <div class="hc-sticky">
+            <ul class="hc-words" aria-label="Áreas">
+                <li><span>Producto</span></li>
+                <li><span>Materiales</span></li>
+                <li><span>Interfaces</span></li>
+                <li><span>Experiencias</span></li>
+            </ul>
+            <div class="hc-center">
+                <div class="hc-stage">
+                    <div class="hc-chick" id="chick-character" data-cursor="¡Pío!" role="img" aria-label="Pollito">
+                        <div class="pc"><div class="pc-b">
+                            <img class="pc-cola" src="img/web/pollito-cola.webp" alt="" draggable="false">
+                            <img class="pc-pata pc-pata1" src="img/web/pollito-pata1.webp" alt="" draggable="false">
+                            <img class="pc-pata pc-pata2" src="img/web/pollito-pata2.webp" alt="" draggable="false">
+                            <img class="pc-cuerpo" src="img/web/pollito-cuerpo.webp" alt="" draggable="false">
+                            <img class="pc-ala" src="img/web/pollito-ala.webp" alt="" draggable="false">
+                        </div></div>
+                    </div>
+                    <h1 class="hc-title" aria-label="Josefina Castro"><span aria-hidden="true" class="hc-letters"><span style="--ci:1">J</span><span style="--ci:2">o</span><span style="--ci:3">s</span><span style="--ci:4">e</span><span style="--ci:5">f</span><span style="--ci:6">i</span><span style="--ci:7">n</span><span style="--ci:8">a</span><span class="hc-sp" style="--ci:9"> </span><span style="--ci:10">C</span><span style="--ci:11">a</span><span style="--ci:12">s</span><span style="--ci:13">t</span><span style="--ci:14">r</span><span style="--ci:15">o</span></span></h1>
+                </div>
+                <p class="hc-name">Portafolio</p>
+            </div>
+            <div class="hc-bottom">
+                <a href="#projects-section" class="hero-scroll-hint"><i aria-hidden="true"></i><span>Scroll</span></a>
+                <span id="hero-live-clock" class="hero-clock">Santiago, CL --:--</span>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- PROYECTOS: tarjetas que se apilan al hacer scroll -->
+        <section id="projects-section" class="works">
+            <div class="content-bound works-head">
+                <h2 class="works-title" data-split>Proyectos seleccionados</h2>
+                <p class="works-meta" data-reveal><span id="works-total">09</span> proyectos · 2024 — 2026</p>
+            </div>
+            <!-- Las tarjetas se generan desde script.js (un solo lugar para editar proyectos) -->
+            <div class="stack" id="stack"></div>
+        </section>
+
+        <!-- CINTA DE ÁREAS -->
+        <section class="marquee marquee-logos" aria-label="Proyectos y colaboraciones">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span class="marquee-logo"><img src="img/web/muma-logotipo-blanco.png" alt="MUMA" style="--h:30px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/mido-imagotipo.svg" alt="MIDO" style="--h:56px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-atakama-negro.png" alt="Atakama" style="--h:30px" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-diseno-uc.svg" alt="Escuela de Diseño UC" style="--h:62px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-uc-negro.svg" alt="Pontificia Universidad Católica de Chile" style="--h:66px" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-ucchristus.svg" alt="UC Christus" style="--h:20px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-elemental.png" alt="Elemental" style="--h:58px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-penalolen-blanco.png" alt="Municipalidad de Peñalolén" style="--h:48px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/yunus-isotipo-blanco.png" alt="Fundación YUNUS" style="--h:50px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-ilani-negro.png" alt="Ilani" style="--h:30px" loading="lazy" draggable="false"></span>
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <span class="marquee-logo"><img src="img/web/muma-logotipo-blanco.png" alt="" style="--h:30px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/mido-imagotipo.svg" alt="" style="--h:56px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-atakama-negro.png" alt="" style="--h:30px" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-diseno-uc.svg" alt="" style="--h:62px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-uc-negro.svg" alt="" style="--h:66px" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-ucchristus.svg" alt="" style="--h:20px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-elemental.png" alt="" style="--h:58px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-penalolen-blanco.png" alt="" style="--h:48px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/yunus-isotipo-blanco.png" alt="" style="--h:50px" class="is-neg" loading="lazy" draggable="false"></span>
+                    <span class="marquee-logo"><img src="img/web/logo-ilani-negro.png" alt="" style="--h:30px" loading="lazy" draggable="false"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT & CV -->
+        <section class="editorial-about-section" id="about-section">
+            <div class="content-bound">
+                <h2 class="works-title about-title" data-split>Sobre mí</h2>
+
+                <div class="about-grid">
+                    <div class="about-portrait-wrap" data-reveal="image">
+                        <img src="img/web/retrato.jpg" alt="Retrato de Josefina Castro" loading="lazy">
+                    </div>
+
+                    <div class="about-copy-col">
+                        <div class="about-aside">
+                            <p class="about-body about-lead" data-reveal>
+                                ¡Hola! Soy Josefina, diseñadora integral de la Pontificia Universidad Católica de Chile. Mis principales intereses están en la comunicación visual y en el diseño de producto, de experiencia, de servicio e industrial.
+                            </p>
+                            <p class="about-body" data-reveal>
+                                Me caracterizo por ser una persona entusiasta y comprometida, siempre dispuesta a nuevos desafíos. Me desempeño bien tanto en proyectos individuales como colaborativos, buscando sacar el mayor provecho de cada uno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editorial-cv-table cv-cols">
+                    <div class="cv-col">
+                            <div class="cv-group-title" data-reveal>Educación</div>
+                            <div class="cv-row" data-reveal>
+                                <span class="cv-year">2021 — 2026</span>
+                                <div class="cv-info">
+                                    <span class="cv-role">Diseño Integral</span>
+                                    <span class="cv-place">Pontificia Universidad Católica de Chile</span>
+                                </div>
+                            </div>
+                            <div class="cv-row" data-reveal style="--d: .08s">
+                                <span class="cv-year">2008 — 2020</span>
+                                <div class="cv-info">
+                                    <span class="cv-role">Colegio Sagrado Corazón de Apoquindo</span>
+                                    <span class="cv-place">Santiago, Chile</span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="cv-col">
+                            <div class="cv-group-title" data-reveal>Experiencia</div>
+                            <div class="cv-row" data-reveal>
+                                <span class="cv-year">2025</span>
+                                <div class="cv-info">
+                                    <span class="cv-role">Practicante Diseño de Producto</span>
+                                    <span class="cv-place">Atakama Outdoor SPA</span>
+                                </div>
+                            </div>
+                            <div class="cv-row" data-reveal style="--d: .08s">
+                                <span class="cv-year">2025</span>
+                                <div class="cv-info">
+                                    <span class="cv-role">Diseño & Comunicación Digital</span>
+                                    <span class="cv-place">MIDO Domótica</span>
+                                </div>
+                            </div>
+                            <div class="cv-row" data-reveal style="--d: .16s">
+                                <span class="cv-year">2025</span>
+                                <div class="cv-info">
+                                    <span class="cv-role">Practicante de Comunicaciones</span>
+                                    <span class="cv-place">Corporación La Esperanza</span>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="editorial-contact-section" id="contact-section">
+            <div class="content-bound">
+                <div class="section-divider-header" data-reveal>
+                    <span class="divider-title">Contacto</span>
+                    <span class="divider-sub">Santiago, Chile</span>
+                </div>
+
+                <div class="contact-editorial-layout">
+                    <div class="contact-huge-cta">
+                        <p class="cta-micro" id="contact-greeting" data-reveal>Let’s talk</p>
+                        <a href="mailto:castro.josefina@uc.cl" class="contact-email-link" data-magnetic="0.12" data-cursor="Escribir" data-reveal>castro.josefina@uc.cl</a>
+                        <button type="button" class="copy-email-btn" id="copy-email" data-email="castro.josefina@uc.cl" data-reveal>Copiar email</button>
+                    </div>
+
+                    <div class="contact-meta-list" data-reveal>
+                        <div class="contact-col">
+                            <span class="contact-col-label">Redes</span>
+                            <a href="https://instagram.com/josefina_castrod" target="_blank" rel="noopener" class="c-link">Instagram ↗</a>
+                            <!-- ⚠️ Completa tu URL de LinkedIn -->
+                            <a href="https://linkedin.com/in/" target="_blank" rel="noopener" class="c-link">LinkedIn ↗</a>
+                        </div>
+                        <div class="contact-col">
+                            <span class="contact-col-label">Ubicación</span>
+                            <span class="c-text">Santiago, Chile</span>
+                            <span class="c-text">UTC-3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 María Josefina Castro Dintrans</p>
+            <p>Diseño Integral · Producto, Espacios & Experiencias</p>
+            <a href="#cover-page" class="back-to-top">Volver arriba ↑</a>
+        </div>
+    </footer>
+
+    <!-- CASO DE ESTUDIO -->
+    <div id="case-study-modal" class="case-study-overlay" role="dialog" aria-modal="true" aria-label="Caso de estudio" aria-hidden="true">
+        <div class="modal-progress" aria-hidden="true"><div class="modal-progress-bar" id="modal-progress-bar"></div></div>
+        <div id="case-study-content" class="case-study-modal-body"></div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+        <button type="button" class="lightbox-close" aria-label="Cerrar imagen">✕</button>
+        <button type="button" class="lightbox-nav lightbox-prev" aria-label="Imagen anterior">←</button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-img" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next" aria-label="Imagen siguiente">→</button>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
