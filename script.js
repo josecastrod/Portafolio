@@ -3,10 +3,10 @@
 /* =========================================================
    0. CONFIGURACIÓN
    ========================================================= */
-const IMG = 'img/web/';          // carpeta de imágenes optimizadas
+const IMG = 'img/';          // carpeta de imágenes optimizadas
 const EMAIL = 'castro.josefina@uc.cl';
 const SITE_TITLE = document.title;
-const I = n => IMG + n;          // atajo: I('muma-uso.webp') → 'img/web/muma-uso.webp'
+const I = n => IMG + n;          // atajo: I('muma-uso.webp') → 'img/muma-uso.webp'
 
 /* Reel de la portada: fotos que van pasando dentro del marco central */
 const reel = [

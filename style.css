@@ -2187,7 +2187,7 @@ img { max-width: 100%; display: block; }
 .intro-foto::before {
     content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
     margin: 0 calc(50% - 50vw);
-    background: url('img/web/topo.svg') center calc(var(--tes-t, 0) * -900px) / 1400px auto repeat-y;
+    background: url('img/topo.svg') center calc(var(--tes-t, 0) * -900px) / 1400px auto repeat-y;
     opacity: .16;
 }
 .intro-foto .kippa-top-bar { background: var(--tes-bg, #1d3323); }
@@ -2226,7 +2226,7 @@ img { max-width: 100%; display: block; }
 
 /* Ruta de norte a sur */
 .ruta .hs-stage { background: var(--tes-bg, #1d3323); color: #f1f5ef; padding-top: 84px; }
-.ruta-topo { position: absolute; inset: -10%; background: url('img/web/topo.svg') center / cover no-repeat; opacity: .35; transform: translateX(calc(var(--rp, 0) * -6%)); pointer-events: none; }
+.ruta-topo { position: absolute; inset: -10%; background: url('img/topo.svg') center / cover no-repeat; opacity: .35; transform: translateX(calc(var(--rp, 0) * -6%)); pointer-events: none; }
 .ruta .hs-head, .ruta .hs-track, .ruta .hs-bar { position: relative; }
 .ruta .kippa-h3 { color: #fff; }
 .ruta .block-text { color: rgba(241, 245, 239, .75); max-width: 46ch; }
@@ -2292,7 +2292,7 @@ img { max-width: 100%; display: block; }
     --line: rgba(29, 51, 35, .12); --line-strong: rgba(29, 51, 35, .2);
     --case-accent: #2f5d3a; --gold-deep: #2f5d3a;
 }
-.is-luz .intro-foto::before { background-image: url('img/web/topo-verde.svg'); opacity: 1; }
+.is-luz .intro-foto::before { background-image: url('img/topo-verde.svg'); opacity: 1; }
 .is-luz .intro-foto::after { opacity: 0; }
 .is-luz .intro-foto .kippa-h3 { color: #1d3323; }
 .is-luz .intro-foto .kippa-h3::before { color: #2f5d3a; }
